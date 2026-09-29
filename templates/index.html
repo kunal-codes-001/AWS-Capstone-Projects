@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AWS Scalable Web Application</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fb;
+            color: #172033;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: #111827;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .status {
+            background: #123c2a;
+            color: #4ade80;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .hero {
+            padding: 60px 7% 35px;
+            background: linear-gradient(135deg, #fff7ed, #ffffff);
+        }
+
+        .hero small {
+            color: #f59e0b;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin: 12px 0;
+        }
+
+        .hero p {
+            color: #667085;
+            font-size: 17px;
+            max-width: 700px;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 86%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            margin: 35px 0 18px;
+        }
+
+        .section-title h2 {
+            font-size: 25px;
+        }
+
+        .section-title p {
+            color: #667085;
+            margin-top: 6px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 14px;
+            padding: 24px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+        }
+
+        .card-label {
+            color: #667085;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card-value {
+            margin-top: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            word-break: break-word;
+        }
+
+        .architecture {
+            background: white;
+            border-radius: 14px;
+            border: 1px solid #e5e7eb;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+        }
+
+        .flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .flow-box {
+            padding: 16px 20px;
+            border-radius: 10px;
+            background: #f8fafc;
+            border: 1px solid #dbe2ea;
+            text-align: center;
+            min-width: 150px;
+            font-weight: bold;
+        }
+
+        .arrow {
+            font-size: 25px;
+            color: #f59e0b;
+            font-weight: bold;
+        }
+
+        .instance-box {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f9fafb;
+            border-left: 5px solid #f59e0b;
+        }
+
+        .instance-box p {
+            margin: 7px 0;
+            color: #475467;
+        }
+
+        footer {
+            background: #111827;
+            color: #98a2b3;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 800px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .header {
+                padding: 16px 5%;
+            }
+
+            .container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">☁ AWS SCALABLE WEB APP</div>
+        <div class="status">● SYSTEM HEALTHY</div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <small>AWS CLOUD PROJECT</small>
+
+            <h1>Scalable Web Application</h1>
+
+            <p>
+                A highly available web application running on AWS using
+                Application Load Balancer, Auto Scaling and Amazon EC2.
+            </p>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <div class="section-title">
+            <h2>Current Server</h2>
+            <p>Live information from the AWS EC2 instance.</p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-label">Instance ID</div>
+
+                <div class="card-value">
+                    {{ instance_id }}
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-label">Availability Zone</div>
+
+                <div class="card-value">
+                    {{ availability_zone }}
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-label">Hostname</div>
+
+                <div class="card-value">
+                    {{ hostname }}
+                </div>
+            </div>
+
+        </div>
+
+        <div class="section-title">
+            <h2>Application Architecture</h2>
+            <p>
+                Traffic is distributed across multiple EC2 instances.
+            </p>
+        </div>
+
+        <div class="architecture">
+
+            <div class="flow">
+
+                <div class="flow-box">
+                    👤 User
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="flow-box">
+                    ⚖ Application<br>
+                    Load Balancer
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="flow-box">
+                    🎯 Target Group
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="flow-box">
+                    🖥 EC2 Instances
+                </div>
+
+            </div>
+
+            <div class="instance-box">
+
+                <strong>High Availability Enabled</strong>
+
+                <p>
+                    Auto Scaling maintains the required number of
+                    application instances.
+                </p>
+
+                <p>
+                    If an instance fails, Auto Scaling can launch a
+                    replacement instance automatically.
+                </p>
+
+                <p>
+                    Application Load Balancer distributes incoming
+                    requests across healthy instances.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        AWS Scalable Web Application • EC2 • ALB • Auto Scaling
+    </footer>
+
+</body>
+</html>
