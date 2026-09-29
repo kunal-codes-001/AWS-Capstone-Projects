@@ -256,6 +256,28 @@ Security best practices were followed during implementation.
 ## 7. Testing and Validation
 
 The following tests were performed:
+## Screenshots
+
+### 1. EC2 Instances
+![EC2 Instances](screenshots/01-ec2-instances.png)
+
+### 2. Launch Template - Version 2
+![Launch Template](screenshots/02-launch-template-v2.png)
+
+### 3. Auto Scaling Group
+![Auto Scaling Group](screenshots/03-auto-scaling-group.png)
+
+### 4. Target Group - Healthy Targets
+![Target Group](screenshots/04-target-group-healthy.png)
+
+### 5. Application Load Balancer
+![Application Load Balancer](screenshots/05-load-balancer.png)
+
+### 6. ALB Website
+![ALB Website](screenshots/06-alb-website.png)
+
+### 7. ALB Traffic Distribution
+![ALB Traffic Distribution](screenshots/07-alb-distribution.png)
 
 ### Test 1 - Application Test
 
