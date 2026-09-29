@@ -257,28 +257,49 @@ Security best practices were followed during implementation.
 
 The following tests were performed:
 ## Screenshots
+## Screenshots
 
 ### 1. EC2 Instances
-![EC2 Instances](screenshots/01-ec2-instances.png)
+
+![EC2 Instances](screenshots/Screenshot%202026-09-30%20011238.png)
 
 ### 2. Launch Template - Version 2
-![Launch Template](screenshots/02-launch-template-v2.png)
+
+![Launch Template](screenshots/Screenshot%202026-09-30%20011538.png)
 
 ### 3. Auto Scaling Group
-![Auto Scaling Group](screenshots/03-auto-scaling-group.png)
+
+![Auto Scaling Group](screenshots/Screenshot%202026-09-30%20011936.png)
 
 ### 4. Target Group - Healthy Targets
-![Target Group](screenshots/04-target-group-healthy.png)
+
+![Target Group](screenshots/Screenshot%202026-09-30%20012248.png)
 
 ### 5. Application Load Balancer
-![Application Load Balancer](screenshots/05-load-balancer.png)
+
+![Application Load Balancer](screenshots/Screenshot%202026-09-30%20012347.png)
 
 ### 6. ALB Website
-![ALB Website](screenshots/06-alb-website.png)
+
+![ALB Website](screenshots/Screenshot%202026-09-30%20012443.png)
 
 ### 7. ALB Traffic Distribution
-![ALB Traffic Distribution](screenshots/07-alb-distribution.png)
 
+![ALB Traffic Distribution](screenshots/Screenshot%202026-09-30%20012538.png)
+
+### Additional AWS Configuration Screenshots
+
+![AWS Screenshot](screenshots/Screenshot%202026-09-30%20012648.png)
+
+![AWS Screenshot](screenshots/Screenshot%202026-09-30%20012720.png)
+
+![AWS Screenshot](screenshots/Screenshot%202026-09-30%20012830.png)
+
+![AWS Screenshot](screenshots/Screenshot%202026-09-30%20012857.png)
+
+![AWS Screenshot](screenshots/Screenshot%202026-09-30%20012932.png)
+
+![AWS Screenshot](screenshots/Screenshot%202026-09-30%20013001.png)
 ### Test 1 - Application Test
 
 The Flask application was accessed successfully through the load balancer.
